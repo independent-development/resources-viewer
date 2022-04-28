@@ -1,12 +1,12 @@
 {
   "private": true,
-  "name": "video-preview",
+  "name": "test-chimera-project",
   "version": "1.3.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ssr-dev-cli dev",
-    "build": "ssr-dev-cli build",
+    "dev": "spa-build-tools dev",
+    "build": "spa-build-tools build",
     "server:stop": "pm2 stop ./server/prod.js",
     "server:start": "pm2 start ./server/prod.js",
     "server:delete": "pm2 delete ./server/prod.js",
@@ -16,23 +16,25 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "antd": "^4.19.5",
+    "antd": "^4.20.1",
     "axios": "^0.26.1",
     "cheerio": "^1.0.0-rc.10",
     "classnames": "^2.3.1",
-    "decache": "4.6.1",
     "dot-prop": "^7.2.0",
     "i18next": "^21.6.14",
     "path-to-regexp": "^6.2.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
     "react-i18next": "^11.15.7",
     "react-responsive": "^9.0.0-beta.6",
-    "react-router-dom": "^6.2.2"
+    "react-router-dom": "^6.2.2",
+    "ssr-window": "^4.0.2"
+  },
+  "peerDependencies": {
+    "express": "^4.x",
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0"
   },
   "devDependencies": {
-    "@babel/preset-typescript": "^7.16.7",
-    "@cyber-vision/ssr-dev-cli": "6.7.0",
+    "@cyber-chimera/spa-build-tools": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "5.19.0",
     "@typescript-eslint/parser": "5.19.0",
     "babel-eslint": "10.1.0",

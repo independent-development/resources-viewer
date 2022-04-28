@@ -15,9 +15,9 @@ if(process.env.NODE_ENV==="development"){
   }
 }
 
-ReactDOM.render((
+ReactDOM.hydrate((
   <I18nextProvider i18n={init18n(window.language)}>
-    <BrowserRouter basename="/">
+    <BrowserRouter basename={window.language}>
       <MainBlock />
     </BrowserRouter>
   </I18nextProvider>

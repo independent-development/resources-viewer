@@ -1,4 +1,7 @@
+import {getDocument} from "ssr-window";
 import get_current_base64 from "@/utils/get_current_base64";
+
+const document=getDocument();
 
 const video_target=document.createElement("video");
 video_target.muted=true;

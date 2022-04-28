@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
 import React,{useRef,useState,useCallback} from "react";
 
+import NoSSR from "@/components/NoSSR";
 import Snapshort from "@/components/Snapshort";
 import FileSelecter from "@/components/FileSelecter";
 import VideoElement from "@/components/VideoElement";
 import PreviewContainer from "@/components/PreviewContainer";
 
 import get_video_snapsheap from "@/utils/get_video_snapsheap";
-
 
 
 export default function IndexPage(){
@@ -31,7 +31,9 @@ export default function IndexPage(){
             <Snapshort key={index} base64={current_base64} onPlay={()=>video_element.current.play(current_time)}/>
         )})}
       </PreviewContainer>
-      <VideoElement blob_url={blob_url} ref={video_element}/>
+      <NoSSR>
+        <VideoElement blob_url={blob_url} ref={video_element}/>
+      </NoSSR>
     </div>
 )}
 
